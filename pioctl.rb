@@ -5,20 +5,20 @@
 class Pioctl < Formula
   desc ""
   homepage "https://github.com/pilvio-com/pioctl"
-  version "0.1.23"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/pilvio-com/pioctl/releases/download/v0.1.23/pioctl_0.1.23_darwin_arm64.tar.gz"
-      sha256 "be0e75ff458c4f78a681531fa71bf632c11f797857676dac1ce2241d3aaf2bb7"
+      url "https://github.com/pilvio-com/pioctl/releases/download/v0.2.0/pioctl_0.2.0_darwin_arm64.tar.gz"
+      sha256 "fed4d85f8aaafd8ea3be1c9fd47d1ae1438f0d92602fbfb5d99b185a6000889a"
 
       def install
         bin.install "pioctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pilvio-com/pioctl/releases/download/v0.1.23/pioctl_0.1.23_darwin_amd64.tar.gz"
-      sha256 "332516f1048c6dc39f63e49710c2cfe1296cd530f813335a68aef41c348aa462"
+      url "https://github.com/pilvio-com/pioctl/releases/download/v0.2.0/pioctl_0.2.0_darwin_amd64.tar.gz"
+      sha256 "ada2226831b266c023bb83554202abe3a42ff7faaf9a97a84dd8236e2a86f6fd"
 
       def install
         bin.install "pioctl"
@@ -28,16 +28,16 @@ class Pioctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pilvio-com/pioctl/releases/download/v0.1.23/pioctl_0.1.23_linux_arm64.tar.gz"
-      sha256 "36e031cb5119d9b329823a9d6b5648614251218b820b5d595d720e1674d9fc79"
+      url "https://github.com/pilvio-com/pioctl/releases/download/v0.2.0/pioctl_0.2.0_linux_arm64.tar.gz"
+      sha256 "80fdb38ceb936ce3343a4d95b456f4cafdde48dcdde9fb04ee562b71caed9ed5"
 
       def install
         bin.install "pioctl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pilvio-com/pioctl/releases/download/v0.1.23/pioctl_0.1.23_linux_amd64.tar.gz"
-      sha256 "5d393a32684cc559e12ce0161760138ad3180725828711c87c0411a4c1888639"
+      url "https://github.com/pilvio-com/pioctl/releases/download/v0.2.0/pioctl_0.2.0_linux_amd64.tar.gz"
+      sha256 "c4e2b52c0e8e7a39be07fa292b7272caf3e94393623b23a08a7370256e061551"
 
       def install
         bin.install "pioctl"
