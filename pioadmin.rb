@@ -5,11 +5,11 @@
 class Pioadmin < Formula
   desc ""
   homepage "https://github.com/pilvio-com/pioadmin"
-  version "0.1.4-rc9-osbase-dhcp"
+  version "0.1.4"
 
   on_macos do
-    url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.4-rc9-osbase-dhcp/pioadmin_0.1.4-rc9-osbase-dhcp_darwin_all.tar.gz"
-    sha256 "fdf2f5941011149001af36e3b683528adcf0cf828f0afa180a38036df97728aa"
+    url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.4/pioadmin_0.1.4_darwin_all.tar.gz"
+    sha256 "2d26561c278b266057faac51f0414434fc37bae079d81c6df7f4c329b46a458f"
 
     def install
       bin.install "pioadmin"
@@ -17,17 +17,17 @@ class Pioadmin < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.4-rc9-osbase-dhcp/pioadmin_0.1.4-rc9-osbase-dhcp_linux_arm64.tar.gz"
-      sha256 "8f8f2c9c2c1d83958daa6061c25a86eb3588a7cae09cbb035c39ca95258fe3ed"
+    if Hardware::CPU.intel?
+      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.4/pioadmin_0.1.4_linux_amd64.tar.gz"
+      sha256 "3a4e9e4da6119dc2604a909cb78cd6b013e44b8e6f7477793005f6e4cdc5f59b"
 
       def install
         bin.install "pioadmin"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.4-rc9-osbase-dhcp/pioadmin_0.1.4-rc9-osbase-dhcp_linux_amd64.tar.gz"
-      sha256 "70ce5827850c460d61a95f89d128870e85ebdcef7ba5d32a7ffb74fa56fe37d0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.4/pioadmin_0.1.4_linux_arm64.tar.gz"
+      sha256 "8295d449ace2e7d89b503363db3079eef55fa3550465fce0182358f50be955e9"
 
       def install
         bin.install "pioadmin"
