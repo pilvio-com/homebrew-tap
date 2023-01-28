@@ -5,11 +5,11 @@
 class Pioadmin < Formula
   desc ""
   homepage "https://github.com/pilvio-com/pioadmin"
-  version "0.1.4"
+  version "0.1.5-rc1"
 
   on_macos do
-    url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.4/pioadmin_0.1.4_darwin_all.tar.gz"
-    sha256 "2d26561c278b266057faac51f0414434fc37bae079d81c6df7f4c329b46a458f"
+    url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.5-rc1/pioadmin_0.1.5-rc1_darwin_all.tar.gz"
+    sha256 "fe959a6c01c7705ab68a36c3387d7e626c87fc037389ed028f31367900f796e4"
 
     def install
       bin.install "pioadmin"
@@ -17,17 +17,17 @@ class Pioadmin < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.4/pioadmin_0.1.4_linux_amd64.tar.gz"
-      sha256 "3a4e9e4da6119dc2604a909cb78cd6b013e44b8e6f7477793005f6e4cdc5f59b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.5-rc1/pioadmin_0.1.5-rc1_linux_arm64.tar.gz"
+      sha256 "9b995ae14a63d460034cec6e6967babbbc0dc5d4f7996e8fdffe5ea0f379c9e1"
 
       def install
         bin.install "pioadmin"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.4/pioadmin_0.1.4_linux_arm64.tar.gz"
-      sha256 "8295d449ace2e7d89b503363db3079eef55fa3550465fce0182358f50be955e9"
+    if Hardware::CPU.intel?
+      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.5-rc1/pioadmin_0.1.5-rc1_linux_amd64.tar.gz"
+      sha256 "0c50e8c9b2610407754f956a0bdfdad2ddbbfffe49d49ae87792556212121c8a"
 
       def install
         bin.install "pioadmin"
