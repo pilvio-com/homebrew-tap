@@ -5,11 +5,11 @@
 class Pioadmin < Formula
   desc ""
   homepage "https://github.com/pilvio-com/pioadmin"
-  version "0.1.5-rc7"
+  version "0.1.5-rc8"
 
   on_macos do
-    url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.5-rc7/pioadmin_0.1.5-rc7_darwin_all.tar.gz"
-    sha256 "8894dc8b1e8ceefc38d17dcc014090526db3deb8c101c0f54b717ef1bc05db56"
+    url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.5-rc8/pioadmin_0.1.5-rc8_darwin_all.tar.gz"
+    sha256 "bf9b6cd9611da8f0a9d452ace367d93363264963eaf3abd3e4c1237b4eed53c1"
 
     def install
       bin.install "pioadmin"
@@ -18,16 +18,16 @@ class Pioadmin < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.5-rc7/pioadmin_0.1.5-rc7_linux_arm64.tar.gz"
-      sha256 "1630d4179c21997edc45794d9fd2972d70ea17bcb3e34be2e596042c6683ccac"
+      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.5-rc8/pioadmin_0.1.5-rc8_linux_arm64.tar.gz"
+      sha256 "2f5f4c6d12c15c269e44cf26bf710cac36d689c3188ff8c6f8997a9c4ead5e5a"
 
       def install
         bin.install "pioadmin"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.5-rc7/pioadmin_0.1.5-rc7_linux_amd64.tar.gz"
-      sha256 "c7ecba5429724489abeeebbc6426079a194e1bf218602862e7566dfddfedffa5"
+      url "https://github.com/pilvio-com/pioadmin/releases/download/v0.1.5-rc8/pioadmin_0.1.5-rc8_linux_amd64.tar.gz"
+      sha256 "bb51b333dcbe19f1462aac197a4d17186cc34b4f0ce25ce7324acfe5722bd902"
 
       def install
         bin.install "pioadmin"
