@@ -5,20 +5,20 @@
 class Pioctl < Formula
   desc ""
   homepage "https://github.com/pilvio-com/pioctl"
-  version "0.4.1"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pilvio-com/pioctl/releases/download/v0.4.1/pioctl_0.4.1_darwin_amd64.tar.gz"
-      sha256 "593a6345e319dc88f0ae6505f0053e23a22676848d5153c214f07e90e093fed3"
+      url "https://github.com/pilvio-com/pioctl/releases/download/v0.5.0/pioctl_0.5.0_darwin_amd64.tar.gz"
+      sha256 "bd430e2d247114fc77e6dce4bbfb5ccea0d3962adc36920b84f9e3a2aa6d42c6"
 
       def install
         bin.install "pioctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pilvio-com/pioctl/releases/download/v0.4.1/pioctl_0.4.1_darwin_arm64.tar.gz"
-      sha256 "b1eb588e609c71ffe5d2a4c0f6453cff507edcfc799cf56cba151c63518c7aaa"
+      url "https://github.com/pilvio-com/pioctl/releases/download/v0.5.0/pioctl_0.5.0_darwin_arm64.tar.gz"
+      sha256 "a99ffdadde0e455b2b759a66613a9fd6b127a3a9ba8a096fd6a8b77d136e5bd2"
 
       def install
         bin.install "pioctl"
@@ -27,17 +27,17 @@ class Pioctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/pilvio-com/pioctl/releases/download/v0.4.1/pioctl_0.4.1_linux_amd64.tar.gz"
-      sha256 "2d7147b88d8bce15aa6843dbd91ca415effbbaff0c584446fc40d040627b1c45"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/pilvio-com/pioctl/releases/download/v0.5.0/pioctl_0.5.0_linux_arm64.tar.gz"
+      sha256 "aa726469f499ffae6d9f886478933b26e5ad59df976375a506a5cb21abf17942"
 
       def install
         bin.install "pioctl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pilvio-com/pioctl/releases/download/v0.4.1/pioctl_0.4.1_linux_arm64.tar.gz"
-      sha256 "f5eddd0e6f8daf95103145846a8b2c88e94eaeffdde9a5579d80f6f52ea4b932"
+    if Hardware::CPU.intel?
+      url "https://github.com/pilvio-com/pioctl/releases/download/v0.5.0/pioctl_0.5.0_linux_amd64.tar.gz"
+      sha256 "5f8047874fc569c9b50115290e79e488983237c020bf06228b6796e919630683"
 
       def install
         bin.install "pioctl"
